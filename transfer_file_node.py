@@ -6,6 +6,7 @@ import subprocess
 html_file_path = './view-components.html'
 download_folder = './view-component'
 
+#cambiar por la url donde puedas listar todas las versiones de está lib
 url = 'https://nexus.prueba.com/service/rest/repository/browse/npm-hosted/librery@/view-components/'
 try:
     subprocess.run(['wget', '-O', html_file_path, url], check=True)
