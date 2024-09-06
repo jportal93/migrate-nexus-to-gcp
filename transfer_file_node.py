@@ -36,6 +36,8 @@ for a_tag in a_tags:
         except requests.exceptions.RequestException as e:
             print(f"Not Download {file_name}: {e}")
         except subprocess.CalledProcessError as e:
-            print(f"Error in 'npm publish' for {file_name}: {e}")
+            print(f"Error in 'npm publish' for {file_name}: {e}")}
+            os.remove(file_name)
         except Exception as e:
             print(f"Error in {file_name}: {e}")
+            os.remove(file_name)
